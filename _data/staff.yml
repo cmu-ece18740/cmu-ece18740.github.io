@@ -1,0 +1,30 @@
+# ---------------------------------------------------------------------------
+# Course staff. Add/remove entries freely -- course_info.html renders whatever
+# is listed here. Blank or omitted `email`, `office`, and `hours` fields are
+# handled gracefully (no empty mailto: links).
+#
+# NEEDS VERIFICATION: the instructor entries below carry forward from Fall 2025.
+# Confirm before the semester starts, and fill in the TA roster.
+# ---------------------------------------------------------------------------
+
+instructors:
+  - name: John Paul Shen
+    role: Instructor
+    email: jpshen@andrew.cmu.edu
+    office: CMU-SV, B23-114
+    hours: Wed 6:00pm - 8:00pm ET (Zoom)
+  - name: Olivia Hsu
+    role: Instructor
+    email: owh@.cmu.edu
+    office: CIC 4121
+    hours: Tu/Th 2:00pm - 3:00pm ET (from SH to CIC)
+
+tas:
+  # Example entry -- fully populated, showing every supported field.
+  - name: TBA
+    email:
+    sections: [A, B]
+    hours: TBA
+  # Example entry -- minimal. Omitted fields simply don't render.
+  - name: TBA
+    sections: [B, SV]

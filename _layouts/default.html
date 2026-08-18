@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+
+<body>
+
+  <h1>{{ site.data.course.number }}: {{ site.data.course.name }}</h1>
+
+  <div class="topnav">
+    {% assign nav = "/,Home|/course_info.html,Course Info|/labs.html,Labs|/past_years.html,Prior Offerings" | split: "|" %}
+    {% for item in nav %}
+      {% assign parts = item | split: "," %}
+      {% assign href = parts[0] %}
+      {% assign is_home = false %}
+      {% if href == "/" %}{% assign is_home = true %}{% endif %}
+      {% assign active = false %}
+      {% if is_home and page.url == "/" %}{% assign active = true %}{% endif %}
+      {% if is_home == false and page.url == href %}{% assign active = true %}{% endif %}
+      <a href="{{ href | relative_url }}"{% if active %} class="active"{% endif %}>{{ parts[1] }}</a>
+    {% endfor %}
+  </div>
+
+  <main>
+    {{ content }}
+  </main>
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+---
+layout: default
+title: Home
+---
+
+{% assign course = site.data.course %}
+
+<h2>Course Description</h2>
+
+<p>{{ course.description }}</p>
+
+<p>{{ course.prereqs }}</p>
+
+<p>
+  For course details, e.g., office hours and grading, see the
+  <a href="{{ '/course_info.html' | relative_url }}">Course Info</a> page.
+  Lab descriptions are on the <a href="{{ '/labs.html' | relative_url }}">Labs</a> page.
+</p>
+
+<div class="note">
+  <b>Note</b>: this page is under construction for {{ course.term }}. The schedule,
+  topics, and dates below are subject to change.
+</div>
+
+<h2>Schedule</h2>
+
+<div class="table-wrap">
+  <table class="schedule">
+    <colgroup>
+      <col class="c-week">
+      <col class="c-date">
+      <col class="c-activity">
+      <col class="c-readings">
+      <col class="c-assign">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Week</th>
+        <th>Date</th>
+        <th>Class Activity</th>
+        <th>Readings</th>
+        <th>Assignments</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for w in site.data.schedule.weeks %}
+        {% if w.break_banner %}
+          <tr class="break-banner">
+            <td colspan="5">
+              <span class="break-date">{{ w.break_banner.date_text }}</span>
+              {{ w.break_banner.title }}
+            </td>
+          </tr>
+        {% endif %}
+        {% if w.lab_banner %}
+          <tr class="lab-banner">
+            <td colspan="5">{{ w.lab_banner }}</td>
+          </tr>
+        {% endif %}
+        {% assign span = w.events | size %}
+        {% for e in w.events %}
+          <tr>
+            {% if forloop.first %}
+              <td class="week" rowspan="{{ span }}">Week {{ w.week }}</td>
+            {% endif %}
+            <td class="date">{{ e.date | date: "%b %-d (%a)" }}</td>
+            <td class="{{ e.kind }}">
+              {%- capture label -%}
+                {%- case e.kind -%}
+                  {%- when 'lecture' -%}Lecture {{ e.number }}: {{ e.title }}
+                  {%- when 'recitation' -%}Recitation {{ e.number }}: {{ e.title }}
+                  {%- when 'holiday' -%}{{ e.title }}
+                  {%- when 'exam' -%}{{ e.title }}
+                  {%- else -%}{% if e.title %}{{ e.title }}{% else %}TBA{% endif %}
+                {%- endcase -%}
+              {%- endcapture -%}
+              {% if e.link %}<a href="{{ e.link }}">{{ label | strip }}</a>{% else %}{{ label | strip }}{% endif %}
+              {%- if e.lecturer %} <span class="lecturer">[{{ e.lecturer }}]</span>{% endif %}
+              {%- if e.note %} <span class="event-note">({{ e.note }})</span>{% endif %}
+            </td>
+            {% if forloop.first %}
+              <td class="readings" rowspan="{{ span }}">
+                {% if w.readings %}
+                  <ul>
+                    {% for r in w.readings %}
+                      <li>
+                        {%- if r.optional %}<span class="optional">(Optional)</span> {% endif -%}
+                        {% if r.url %}<a href="{{ r.url }}">{{ r.title }}</a>{% else %}{{ r.title }}{% endif %}
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </td>
+              <td class="assignments" rowspan="{{ span }}">
+                {% if w.assignments %}
+                  <ul>
+                    {% for a in w.assignments %}
+                      <li>
+                        {% if a.url %}<a href="{{ a.url }}">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}
+                        <span class="status status-{{ a.status }}">{{ a.status }}</span>
+                        <span class="status-date">{{ a.date | date: "%b %-d" }}</span>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </td>
+            {% endif %}
+          </tr>
+        {% endfor %}
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

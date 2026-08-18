@@ -1,0 +1,372 @@
+# ---------------------------------------------------------------------------
+# Course schedule for Fall 2026, rendered by index.html.
+#
+# Generated from temp-schedule.yml. Readings are NOT in that source, so the
+# Readings column is currently empty -- add `readings:` to events as you go.
+#
+# STRUCTURE
+#   weeks:            ordered list; each week renders as a rowspan group
+#     week:           week number shown in the first column
+#     lab_banner:     optional full-width banner row shown ABOVE the week
+#     break_banner:   optional full-width break row shown ABOVE the week
+#       date_text:    literal date text, e.g. "10/12-10/16" (a range, not a date)
+#       title:        e.g. "NO CLASSES - Fall Break!!!"
+#     readings:       optional reading list for the WHOLE week; spans the week's
+#                     rows as a single cell
+#       title:        free text
+#       url:          optional -- renders as a link when present
+#       optional:     true to prefix the entry with "(Optional)"
+#     assignments:    optional release/due milestones; fills the last column.
+#                     Dates need NOT be class days -- this is how a Monday
+#                     deadline gets shown.
+#       name:         e.g. "Lab 1"
+#       status:       released | due -- OMIT for a plain dated note
+#       date:         ISO yyyy-mm-dd
+#       url:          optional link to the handout or submission page
+#     events:         one entry per class meeting (TR = lecture, F = recitation)
+#       date:         ISO yyyy-mm-dd (rendered as "Aug 25 (Tue)")
+#       kind:         lecture | recitation | exam | holiday | tba
+#       number:       lecture or recitation number
+#       title:        free text
+#       lecturer:     free text -- initials or a full name
+#       note:         optional muted annotation, e.g. "Async"
+#       link:         optional URL; the title links only when this is present
+#
+# YAML GOTCHA: quote any value containing ' #' -- in unquoted YAML a hash
+# preceded by a space starts a comment, silently truncating the value.
+#   title: MIDTERM EXAM #1     -> becomes "MIDTERM EXAM"
+#   title: "MIDTERM EXAM #1"   -> correct
+#
+# SOURCE CORRECTIONS (verified against the CMU 2026-27 official calendar):
+#   "8/30 Mon  Lab 0 Due"  -> 8/31; Aug 30 2026 is a SUNDAY
+#   "9/29 Mon  HW 2 Due"   -> 9/28; Sep 29 2026 is a TUESDAY (a lecture day)
+#   Both were the only two of 53 dated entries whose weekday label was wrong,
+#   and every other deadline falls on a Monday.
+#
+# FALL 2026 CALENDAR (CMU registrar, 2026-27 Official Academic Calendar):
+#   Classes         Mon Aug 24 - Fri Dec 4, 2026
+#   Labor Day       Mon Sep 7                 (no classes)
+#   Fall Break      Mon Oct 12 - Fri Oct 16   (no classes)
+#   Democracy Day   Tue Nov 3                 (no classes)
+#   Thanksgiving    Wed Nov 25 no classes; Thu Nov 26 - Fri Nov 27 closed
+#   Final exams     Dec 7-8, 10-11, 14        (reading days Dec 9, 12-13)
+# ---------------------------------------------------------------------------
+
+weeks:
+
+  - week: 1
+    lab_banner: "Lab 0: Orientation (1 week)"
+    readings:
+      - title: "Course syllabus (read in full)"
+        url: https://canvas.cmu.edu/courses/55646
+      - title: "Shen & Lipasti, Chapters 1 & 2"
+      - title: "Lecture 1 slides (Canvas / Modules)"
+        url: https://canvas.cmu.edu/courses/55646
+      - title: "gem5 tutorial (video)"
+        url: https://www.youtube.com/watch?v=npbMXXoKltg
+        optional: true
+    assignments:
+      - name: "Lab 1"
+        status: released
+        date: 2026-08-28
+    events:
+      - date: 2026-08-25
+        kind: lecture
+        number: 1
+        title: "Computer Architecture & Processor Design"
+        lecturer: "OH/JS"
+      - date: 2026-08-27
+        kind: lecture
+        number: 2
+        title: "Modern Superscalar Out-of-Order Processors"
+        lecturer: "JS"
+      - date: 2026-08-28
+        kind: recitation
+        number: 1
+        title: "Course Overview & Lab 0 & Lab 1 & Logistics"
+
+  - week: 2
+    lab_banner: "Lab 1: CPU Design: Dynamic Branch Predictors (2 weeks)"
+    assignments:
+      - name: "Lab 0"
+        status: due
+        date: 2026-08-31
+    events:
+      - date: 2026-09-01
+        kind: lecture
+        number: 3
+        title: "Advanced Dynamic Branch Prediction Techniques"
+        lecturer: "JS"
+      - date: 2026-09-03
+        kind: lecture
+        number: 4
+        title: "Instruction Fetch and Decode Techniques"
+        lecturer: "JS"
+      - date: 2026-09-04
+        kind: recitation
+        number: 2
+        title: "Ensure Team Formations & Discussion of Modern Superscalar Out-of-Order Processors"
+
+  - week: 3
+    assignments:
+      - name: "Lab 2"
+        status: released
+        date: 2026-09-11
+      - name: "HW 1"
+        status: released
+        date: 2026-09-11
+    events:
+      - date: 2026-09-08
+        kind: lecture
+        number: 5
+        title: "Register Renaming & Out-of-Order Execution"
+        lecturer: "JS"
+      - date: 2026-09-10
+        kind: lecture
+        number: 6
+        title: "Dynamic Instruction Scheduling Techniques"
+        lecturer: "JS"
+      - date: 2026-09-11
+        kind: recitation
+        number: 3
+        title: "Lab 2 Preview & Tomasulo’s Algorithm"
+
+  - week: 4
+    lab_banner: "Lab 2: CPU Design: Superscalar Out-of-Order Structures (2.5 weeks)"
+    assignments:
+      - name: "Lab 1"
+        status: due
+        date: 2026-09-14
+      - name: "5-8pm: Presentation prep session (optional)"
+        date: 2026-09-15
+      - name: "HW 2"
+        status: released
+        date: 2026-09-18
+    events:
+      - date: 2026-09-15
+        kind: lecture
+        number: 7
+        title: "Dealing with Long Latency Memory Instructions"
+        lecturer: "OH"
+      - date: 2026-09-17
+        kind: lecture
+        number: 8
+        title: "Modern Memory Hierarchy & Data Storage"
+        lecturer: "OH"
+      - date: 2026-09-18
+        kind: recitation
+        number: 4
+        title: "Cache Coherence, Memory Consistency, Asym. Cores"
+
+  - week: 5
+    assignments:
+      - name: "HW 1"
+        status: due
+        date: 2026-09-21
+    events:
+      - date: 2026-09-22
+        kind: lecture
+        number: 9
+        title: "System Level Memory Prefetching Techniques"
+        lecturer: "TH/LC"
+      - date: 2026-09-24
+        kind: lecture
+        number: 10
+        title: "Operating System & Runtime Environment"
+        lecturer: "SM/LC"
+      - date: 2026-09-25
+        kind: recitation
+        number: 5
+        title: "Memory Subsystem & Heterogeneous Architectures"
+
+  - week: 6
+    assignments:
+      - name: "HW 2"
+        status: due
+        date: 2026-09-28
+      - name: "Lab 3"
+        status: released
+        date: 2026-10-02
+      - name: "HW 3"
+        status: released
+        date: 2026-10-02
+    events:
+      - date: 2026-09-29
+        kind: lecture
+        number: 11
+        title: "Parallel Programming & Threading Models"
+        lecturer: "OH"
+      - date: 2026-10-01
+        kind: lecture
+        number: 12
+        title: "Modern Heterogeneous CPU-GPU Architectures"
+        lecturer: "OH"
+      - date: 2026-10-02
+        kind: recitation
+        number: 6
+        title: "Operating Systems & Parallel Programming & Discussion of Lab 3 / Qualcomm Board Logistics"
+
+  - week: 7
+    lab_banner: "Lab 3: Asymmetric Cores: Multicore CPUs & Shared Memory (2.5 weeks)"
+    assignments:
+      - name: "Lab 2"
+        status: due
+        date: 2026-10-05
+      - name: "HW 4"
+        status: released
+        date: 2026-10-09
+    events:
+      - date: 2026-10-06
+        kind: exam
+        title: "MIDTERM EXAM #1"
+      - date: 2026-10-08
+        kind: lecture
+        number: 13
+        title: "GPU and TPU for Accelerating AI Workloads"
+        lecturer: "OH"
+      - date: 2026-10-09
+        kind: recitation
+        number: 7
+        title: "Unified Memory & Exam #1 Post Mortem"
+        note: "Async"
+
+  - week: 8
+    break_banner:
+      date_text: "10/12-10/16"
+      title: "NO CLASSES - Fall Break!!!"
+    assignments:
+      - name: "HW 3"
+        status: due
+        date: 2026-10-19
+      - name: "HW 5"
+        status: released
+        date: 2026-10-23
+    events:
+      - date: 2026-10-20
+        kind: lecture
+        number: 14
+        title: "Survey of Cloud & Edge AI Inference Accelerators"
+        lecturer: "OH"
+      - date: 2026-10-22
+        kind: lecture
+        number: 15
+        title: "Research on Sparse Tensor Compilation and Mapping for Heterogeneous Domain-Specific Accelerators"
+        lecturer: "OH"
+      - date: 2026-10-23
+        kind: recitation
+        number: 8
+        title: "Sparse Tensor Compilation & VLIW & Profiling Lab"
+
+  - week: 9
+    lab_banner: "Lab 4: Heterogeneous Cores: with GPUs (2.5 weeks)"
+    assignments:
+      - name: "HW 4"
+        status: due
+        date: 2026-10-26
+      - name: "HW 6"
+        status: released
+        date: 2026-10-30
+    events:
+      - date: 2026-10-27
+        kind: lecture
+        number: 16
+        title: "Performance, Power, Energy Efficiency Iron Laws"
+        lecturer: "JS"
+      - date: 2026-10-29
+        kind: lecture
+        number: 17
+        title: "Re-Emergence of VLIW in NPU and LPU Designs"
+        lecturer: "JS"
+      - date: 2026-10-30
+        kind: recitation
+        number: 9
+        title: "Neuromorphic Computing Case Studies"
+
+  - week: 10
+    assignments:
+      - name: "HW 5"
+        status: due
+        date: 2026-11-02
+    events:
+      - date: 2026-11-03
+        kind: holiday
+        title: "NO CLASS - Democracy Day"
+      - date: 2026-11-05
+        kind: lecture
+        number: 18
+        title: "Grace-Blackwell & Vera-Rubin CPU-GPU Architectures"
+        lecturer: "Prabhu Vellaisamy - Samsung, NVIDIA (CMU alum)"
+      - date: 2026-11-06
+        kind: recitation
+        number: 10
+        title: "Survey of AI Inference Hardware"
+
+  - week: 11
+    assignments:
+      - name: "HW 6"
+        status: due
+        date: 2026-11-09
+    events:
+      - date: 2026-11-10
+        kind: lecture
+        number: 19
+        title: "Neuromorphic & NeuroAI Computing Systems"
+        lecturer: "JS/LC"
+      - date: 2026-11-12
+        kind: lecture
+        number: 20
+        title: "Experimental Characterization of LLM Inference on Heterogeneous (Edge & Server) Systems"
+        lecturer: "JS"
+      - date: 2026-11-13
+        kind: recitation
+        number: 11
+        title: "Scheduling Lab"
+
+  - week: 12
+    lab_banner: "Lab 5: Heterogeneous Cores: with NPUs (2.5 weeks)"
+    events:
+      - date: 2026-11-17
+        kind: exam
+        title: "MIDTERM EXAM #2"
+      - date: 2026-11-19
+        kind: lecture
+        number: 21
+        title: "Special Guest #1 Career Story of a Computer Architect"
+        lecturer: "Bryan Black - Moto, Intel, AMD, Chipletz (CMU alum)"
+      - date: 2026-11-20
+        kind: recitation
+        number: 12
+        title: "TBD & Exam #2 Post Mortem"
+
+  - week: 13
+    events:
+      - date: 2026-11-24
+        kind: holiday
+        title: "NO CLASS"
+      - date: 2026-11-26
+        kind: holiday
+        title: "NO CLASS - Thanksgiving Holiday"
+      - date: 2026-11-27
+        kind: holiday
+        title: "NO CLASS - Thanksgiving Holiday"
+
+  - week: 14
+    assignments:
+      - name: "Lab 5 (no late submission)"
+        status: due
+        date: 2026-12-09
+    events:
+      - date: 2026-12-01
+        kind: lecture
+        number: 22
+        title: "Special Guest #2 Career Story of a Computer Architect"
+        lecturer: "Trung Diep - Intel, Rambus, Marvell (CMU alum)"
+      - date: 2026-12-03
+        kind: lecture
+        number: 23
+        title: "Special Guest #3 Career Story of a Computer Architect"
+        lecturer: "Bob Rychlik - Intel, Qualcomm (CMU alum)"
+      - date: 2026-12-04
+        kind: recitation
+        number: 13
+        title: "TBD & Course Wrapup"

@@ -1,0 +1,26 @@
+---
+layout: default
+title: Prior Offerings
+---
+
+<h2>Prior Offerings</h2>
+
+{% comment %}
+  Prior offerings are listed in _data/prior_offerings.yml. An entry renders as a
+  link only when it has a `url:` key.
+
+  To archive the current offering (e.g. in Fall 2027), copy the rendered site
+  into archive/fall2026/ and add `url: /archive/fall2026/` to that entry.
+{% endcomment %}
+
+<ul>
+  {% for o in site.data.prior_offerings.offerings %}
+    <li>
+      {% if o.url %}
+        <a href="{{ o.url | relative_url }}">{{ o.term }}</a>
+      {% else %}
+        {{ o.term }} <span class="tba">(no archived page)</span>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

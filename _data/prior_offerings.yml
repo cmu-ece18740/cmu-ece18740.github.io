@@ -1,0 +1,14 @@
+# ---------------------------------------------------------------------------
+# Prior offerings, rendered by past_years.html.
+#
+# Add `url:` to an entry once an archived page exists for it, and the term
+# becomes a link. Without `url:` it renders as plain text.
+#
+# To archive the current offering (e.g. in Fall 2027): copy the rendered site
+# into archive/fall2026/, then add an entry here with
+#   url: /archive/fall2026/
+# ---------------------------------------------------------------------------
+
+offerings:
+  - term: Fall 2025
+    # url: /archive/fall2025/   # no archived page published yet

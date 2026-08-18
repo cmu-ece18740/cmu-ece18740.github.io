@@ -1,0 +1,125 @@
+---
+layout: default
+title: Course Info
+---
+
+{% assign course = site.data.course %}
+
+<h2>Basic Logistics</h2>
+
+<p><b>Term</b>: {{ course.term }}</p>
+
+{% for m in course.meetings %}
+  <p>
+    <b>Section {{ m.section }}</b>{% if m.campus %} ({{ m.campus }}){% endif %}:
+    Lectures {{ m.lectures }}; Recitation {{ m.recitation }}
+  </p>
+{% endfor %}
+
+{% if course.links %}
+  <h2>Course Links</h2>
+  {% assign unset = 0 %}
+  {% for l in course.links %}
+    {% if l.placeholder or l.url == nil %}{% assign unset = unset | plus: 1 %}{% endif %}
+  {% endfor %}
+  {% if unset > 0 %}
+    <div class="note">
+      <b>Note</b>: {{ unset }} of these links are not final yet and will be
+      updated before the semester begins.
+    </div>
+  {% endif %}
+  <ul class="course-links">
+    {% for l in course.links %}
+      <li>
+        {% if l.url %}
+          <a href="{{ l.url }}">{{ l.name }}</a>
+          {%- if l.placeholder %} <span class="tba">(placeholder)</span>{% endif %}
+        {% else %}
+          {{ l.name }} <span class="tba">(link TBA)</span>
+        {% endif %}
+        {%- if l.note %} &mdash; <span class="staff-role">{{ l.note }}</span>{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+<h2>Course Staff</h2>
+
+{% for p in site.data.staff.instructors %}
+  <p>
+    <b>{% if p.role %}{{ p.role }}{% else %}Instructor{% endif %}</b>:
+    {% if p.email %}<a href="mailto:{{ p.email }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}
+    {%- if p.office %} &middot; <span class="staff-role">Office: {{ p.office }}</span>{% endif %}
+    {%- if p.hours %} &middot; <span class="staff-role">Office hours: {{ p.hours }}</span>{% endif %}
+  </p>
+{% endfor %}
+
+{% if site.data.staff.tas and site.data.staff.tas != empty %}
+  <h3>Teaching Assistants</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Sections</th>
+          <th>Office Hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ta in site.data.staff.tas %}
+          <tr>
+            <td>
+              {% if ta.email %}<a href="mailto:{{ ta.email }}">{{ ta.name }}</a>{% else %}{{ ta.name }}{% endif %}
+            </td>
+            <td>{% if ta.sections %}{{ ta.sections | join: ", " }}{% else %}&mdash;{% endif %}</td>
+            <td>{% if ta.hours %}{{ ta.hours }}{% else %}TBA{% endif %}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endif %}
+
+<h2>Grading</h2>
+
+<div class="table-wrap">
+  <table>
+    <tbody>
+      {% assign total = 0 %}
+      {% for g in course.grading %}
+        {% assign total = total | plus: g.weight %}
+        <tr>
+          <td>{{ g.weight }}%</td>
+          <td>{{ g.item }}</td>
+        </tr>
+      {% endfor %}
+      <tr class="grading-total">
+        <td>{{ total }}%</td>
+        <td>TOTAL</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+  Final letter grades are determined by the weighted total of lab assignments,
+  exams, and quizzes/participation. Weekly multiple-choice quizzes (3&ndash;5 short
+  questions) are due Friday before recitation and cover that week's two lectures.
+</p>
+
+{% if course.textbook %}
+  <h2>Textbook</h2>
+  <p>
+    {% if course.textbook.required %}<b>Required</b>: {% endif %}
+    <i>{{ course.textbook.title }}</i>, {{ course.textbook.authors }}.
+    {{ course.textbook.publisher }}. ISBN {{ course.textbook.isbn }}.
+  </p>
+{% endif %}
+
+<h2>Lab Assignments and Late Policy</h2>
+
+<p>{{ course.policies.late }}</p>
+
+<h2>Students with Disabilities</h2>
+
+<p>{{ course.policies.accommodations }}</p>

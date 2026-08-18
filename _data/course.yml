@@ -1,0 +1,109 @@
+# ---------------------------------------------------------------------------
+# Course identity and logistics. This is the file a semester rollover touches.
+# Everything here is rendered by index.html and course_info.html.
+# ---------------------------------------------------------------------------
+
+number: 18-740
+name: Modern Computer Architecture and Design
+term: Fall 2026
+
+# Course links, rendered as a list on the Course Info page.
+#
+# Mark an entry `placeholder: true` while its URL is still a stand-in -- it
+# renders with a "(placeholder)" marker, and the warning box on the Course Info
+# page appears only while at least one such entry remains. Drop the flag once
+# the real URL is in. Entries with no `url` at all render as "(link TBA)".
+links:
+  - name: Canvas
+    url: https://canvas.cmu.edu/courses/55646
+    note: Syllabus, lecture slides, recordings, and grades
+  - name: Gradescope
+    url: https://www.gradescope.com
+    note: Lab submissions and weekly quizzes
+    placeholder: true
+  - name: Piazza
+    url: https://piazza.com
+    note: Course Q&A and announcements
+    placeholder: true
+  - name: Full Syllabus
+    url: https://canvas.cmu.edu/courses/55646
+    note: Authoritative course policies (posted on Canvas)
+
+description: >-
+  Computer architecture deals with the art and science of designing and
+  integrating hardware subsystems, spanning the hardware/software interface, to
+  create a computer system that achieves functional correctness and meets design
+  objectives in performance, power, energy, and cost. This course provides
+  in-depth coverage of modern computer systems, with a special focus on
+  Systems-on-Chip (SoCs) for mass-market mobile and edge computing devices,
+  including smartphones, tablets, and diverse smart home/office devices. Topics
+  span the design and evaluation of three major subsystems: (1) the processing
+  subsystem -- superscalar out-of-order cores, multicore processors, asymmetric
+  and heterogeneous cores, and AI/DL accelerators; (2) the memory subsystem --
+  main memory and DRAM, multicore cache hierarchies, and co-processor shared
+  memory management; and (3) the interconnect subsystem -- Network on Chip (NoC),
+  multi-die packages, and chiplets. Each subsystem is studied from the
+  perspective of several first-class design goals: performance, power
+  consumption, and energy efficiency. The course places strong emphasis on
+  professional design tools (architecture/microarchitecture simulators, RTL
+  design and synthesis, area/power/thermal modeling) and on hands-on
+  experimentation with physical hardware, with the goal of preparing students to
+  be highly competent processor designers and computer architects in industry.
+
+prereqs: >-
+  Recommended pre/co-requisites: 15-513/18-613; 18-447 (or a course based on
+  Computer Organization and Design by Patterson & Hennessy). Verilog and gem5
+  experience would be very helpful.
+
+textbook:
+  title: "Modern Processor Design: Fundamentals of Superscalar Processors"
+  authors: John Shen and Mikko Lipasti
+  publisher: Waveland Press, 2013 (originally 2005)
+  isbn: 978-1-4786-0783-0
+  required: true
+
+# Meeting times and rooms. Rooms are TBA -- F25 room assignments are not
+# guaranteed to repeat. Times below follow the F25 TR + F pattern.
+meetings:
+  - section: A
+    campus: Pittsburgh
+    lectures: TR, 12:30pm - 1:50pm (ET), room TBA
+    recitation: F, 11:00am - 11:50am (ET), room TBA
+  - section: B
+    campus: Pittsburgh
+    lectures: TR, 12:30pm - 1:50pm (ET), room TBA
+    recitation: F, 2:00pm - 2:50pm (ET), room TBA
+  - section: SV
+    campus: Silicon Valley
+    lectures: TR, 9:30am - 10:50am (PT), room TBA
+    recitation: F, 11:00am - 11:50am (PT), room TBA
+
+# Weights must sum to 100 (course_info.html shows the total).
+grading:
+  - item: Lab Assignments (5)
+    weight: 60
+  - item: "Midterm Exam #1"
+    weight: 15
+  - item: "Midterm Exam #2"
+    weight: 15
+  - item: Weekly Quizzes & Class Participation
+    weight: 10
+
+policies:
+  late: >-
+    You will work on Labs 1-5 in small teams of 2 students. All lab assignments
+    are due at 11:59pm ET on the specified due date. The penalty for late
+    assignments is 10% per day. Each student receives a budget of five grace days
+    for the entire course; each grace day covers one late day without penalty.
+    Grace days are applied automatically until you run out, but no more than two
+    grace days may be used on any single lab assignment. Once your grace days are
+    spent, you incur a 10% penalty for each subsequent late day. Late assignments
+    are accepted up to two days after the specified due date only.
+  accommodations: >-
+    If you have a disability and have an accommodations letter from the
+    Disability Resources office, please discuss your accommodations and needs
+    with the instructors as early in the semester as possible. We will work with
+    you to ensure that accommodations are provided as appropriate. If you suspect
+    that you may have a disability and would benefit from accommodations but are
+    not yet registered with the Office of Disability Resources, please contact
+    them at access@andrew.cmu.edu.

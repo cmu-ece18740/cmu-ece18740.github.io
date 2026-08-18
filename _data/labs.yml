@@ -1,0 +1,47 @@
+# ---------------------------------------------------------------------------
+# Lab assignments, rendered by labs.html.
+#
+# `id` must match the `lab:` value used in _data/schedule.yml so the schedule's
+# Lab column lines up with the descriptions on the Labs page.
+#
+# EXAMPLE ENTRIES ONLY -- two of the six labs are filled in to show the schema.
+# See course_files_export/Labs F25/ for the Fall 2025 handouts.
+# ---------------------------------------------------------------------------
+
+labs:
+  - id: Lab 0
+    title: Orientation
+    duration: 1 week
+    tools: [gem5, McPAT]
+    bullets:
+      - Learn how to run programs
+      - Do some initial analysis of metrics and pipeline stalls
+      - Experiment with different built-in processor configurations
+    # handout: https://canvas.cmu.edu   # optional -- a PDF path or Canvas link
+
+  - id: Lab 1
+    title: "CPU Design: Dynamic Branch Predictors"
+    duration: 2 weeks
+    tools: [gem5, McPAT]
+    bullets:
+      - Implement global, local, gshare, perceptron, and TAGE predictors in C
+      - Study performance, energy, area, and efficiency metrics
+      - Design your own branch prediction algorithm (class competition)
+
+  # Titles and durations below come from the Fall 2026 schedule. The `bullets:`
+  # are not in that source -- add them from the lab handouts.
+  - id: Lab 2
+    title: "CPU Design: Superscalar Out-of-Order Structures"
+    duration: 2.5 weeks
+
+  - id: Lab 3
+    title: "Asymmetric Cores: Multicore CPUs & Shared Memory"
+    duration: 2.5 weeks
+
+  - id: Lab 4
+    title: "Heterogeneous Cores: with GPUs"
+    duration: 2.5 weeks
+
+  - id: Lab 5
+    title: "Heterogeneous Cores: with NPUs"
+    duration: 2.5 weeks

@@ -1,0 +1,4 @@
+title: CMU ECE 18-740
+description: Modern Computer Architecture and Design
+exclude:
+  - README.md
