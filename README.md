@@ -13,8 +13,17 @@ Most edits are in `_data/`.
 | `_data/labs.yml` | Labs page |
 | `_data/staff.yml` | Instructors and TAs on Course Info |
 | `_data/prior_offerings.yml` | Prior Offerings page |
+| `calendar.html` | Embedded Google Calendar (edit the iframe `src` for a new term) |
 
 Each file lists its fields at the top.
+
+## Adding a page
+
+1. Create `foo.html` at the repo root with front matter `layout: default` and
+   `title: Foo`. The layout prints the `<h1>`, so start the body with `<h2>`.
+2. Add it to the menu. The nav is a single string on line 16 of
+   `_layouts/default.html` -- append `|/foo.html,Foo` to it. Labels cannot
+   contain commas; the loop splits items on `,`.
 
 ## YAML notes
 

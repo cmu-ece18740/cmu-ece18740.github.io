@@ -13,7 +13,7 @@
   <h1>{{ site.data.course.number }}: {{ site.data.course.name }}</h1>
 
   <div class="topnav">
-    {% assign nav = "/,Home|/course_info.html,Course Info|/labs.html,Labs|/past_years.html,Prior Offerings" | split: "|" %}
+    {% assign nav = "/,Home|/course_info.html,Course Info|/labs.html,Labs|/calendar.html,Course Calendar|/past_years.html,Prior Offerings" | split: "|" %}
     {% for item in nav %}
       {% assign parts = item | split: "," %}
       {% assign href = parts[0] %}

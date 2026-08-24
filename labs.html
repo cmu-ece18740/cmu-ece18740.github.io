@@ -6,16 +6,27 @@ title: Labs
 <h2>Lab Assignments</h2>
 
 <p>
-  You will work on the labs in small teams of 2 students. See the
+  You will work on Labs 1-4 in small teams of 2 students; Lab 0 is done
+  individually. See the
   <a href="{{ '/course_info.html' | relative_url }}">Course Info</a> page for the
   late policy and grace-day budget, and the
   <a href="{{ '/' | relative_url }}">schedule</a> for when each lab runs.
 </p>
 
+<div class="note">
+  More details and updates will be provided throughout the course of the
+  semester.
+</div>
+
 {% for l in site.data.labs.labs %}
   <h3>
     {{ l.id }}: {% if l.handout %}<a href="{{ l.handout }}">{{ l.title }}</a>{% else %}{{ l.title }}{% endif %}
-    {%- if l.duration %} <span class="lecturer">({{ l.duration }})</span>{% endif %}
+    {%- comment -%}
+      Duration and team size share one parenthetical so a lab carrying both does
+      not render "(1 week) (individual)". `team` is set only on exceptions to the
+      teams-of-2 default stated in the prose above.
+    {%- endcomment -%}
+    {%- if l.duration or l.team %} <span class="lecturer">({{ l.duration }}{% if l.duration and l.team %}, {% endif %}{{ l.team }})</span>{% endif %}
   </h3>
   {% if l.bullets %}
     <ul>

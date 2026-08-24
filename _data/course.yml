@@ -16,18 +16,18 @@ term: Fall 2026
 links:
   - name: Canvas
     url: https://canvas.cmu.edu/courses/55646
-    note: Syllabus, lecture slides, recordings, and grades
+    note: Syllabus, lecture slides, recordings, and more
   - name: Gradescope
-    url: https://www.gradescope.com
-    note: Lab submissions and weekly quizzes
-    placeholder: true
+    url: https://www.gradescope.com/courses/1354815
+    note: Assignment submissions and grading
   - name: Piazza
-    url: https://piazza.com
+    url: https://piazza.com/cmu/fall2026/18740/info
     note: Course Q&A and announcements
-    placeholder: true
   - name: Full Syllabus
     url: https://canvas.cmu.edu/courses/55646
-    note: Authoritative course policies (posted on Canvas)
+    note: >-
+      Full course policies are on
+      Canvas. A subset of policies are on this course website.
 
 description: >-
   Computer architecture deals with the art and science of designing and
@@ -62,43 +62,106 @@ textbook:
   isbn: 978-1-4786-0783-0
   required: true
 
-# Meeting times and rooms. Rooms are TBA -- F25 room assignments are not
-# guaranteed to repeat. Times below follow the F25 TR + F pattern.
+# Meeting times, rooms, and section capacities.
+#
+# `lecture_id` groups sections that share a lecture: Pittsburgh sections A and B
+# both sit in Lecture 1, Silicon Valley is Lecture 2. Sections with the same
+# lecture_id should have identical lecture times and rooms.
+#
+# `capacity` is the section cap. Omit `room` on either meeting to render
+# "room TBA" instead.
 meetings:
   - section: A
     campus: Pittsburgh
-    lectures: TR, 12:30pm - 1:50pm (ET), room TBA
-    recitation: F, 11:00am - 11:50am (ET), room TBA
+    capacity: 80
+    lecture_id: 1
+    lecture:
+      when: TR, 12:30pm - 1:50pm (ET)
+      room: SH-105
+      modality: in-person
+    recitation:
+      when: F, 11:00am - 11:50am (ET)
+      room: MM-103
+      modality: in-person
+
   - section: B
     campus: Pittsburgh
-    lectures: TR, 12:30pm - 1:50pm (ET), room TBA
-    recitation: F, 2:00pm - 2:50pm (ET), room TBA
+    capacity: 80
+    lecture_id: 1
+    lecture:
+      when: TR, 12:30pm - 1:50pm (ET)
+      room: SH-105
+      modality: in-person
+    recitation:
+      when: F, 2:00pm - 2:50pm (ET)
+      room: BH-A51
+      modality: in-person
+
   - section: SV
     campus: Silicon Valley
-    lectures: TR, 9:30am - 10:50am (PT), room TBA
-    recitation: F, 11:00am - 11:50am (PT), room TBA
+    capacity: 6
+    lecture_id: 2
+    lecture:
+      when: TR, 9:30am - 10:50am (PT)
+      room: B23-212
+      modality: in-person
+    recitation:
+      when: F, 11:00am - 11:50am (PT)
+      room: B23-211
+      modality: in-person
 
 # Weights must sum to 100 (course_info.html shows the total).
 grading:
-  - item: Lab Assignments (5)
-    weight: 60
+  - item: Lab Assignments 
+    weight: 35
   - item: "Midterm Exam #1"
-    weight: 15
+    weight: 25
   - item: "Midterm Exam #2"
-    weight: 15
-  - item: Weekly Quizzes & Class Participation
-    weight: 10
+    weight: 25
+  - item: "Class Participation"
+    weight: 9
+  - item: "Homeworks"
+    weight: 6
 
+# Rendered on course_info.html. `late` and `homework` are paragraph lists so a
+# multi-paragraph policy keeps its structure; `bullets` renders as a <ul> after
+# the paragraphs. `accommodations` is a single paragraph.
 policies:
-  late: >-
-    You will work on Labs 1-5 in small teams of 2 students. All lab assignments
-    are due at 11:59pm ET on the specified due date. The penalty for late
-    assignments is 10% per day. Each student receives a budget of five grace days
-    for the entire course; each grace day covers one late day without penalty.
-    Grace days are applied automatically until you run out, but no more than two
-    grace days may be used on any single lab assignment. Once your grace days are
-    spent, you incur a 10% penalty for each subsequent late day. Late assignments
-    are accepted up to two days after the specified due date only.
+  late:
+    paragraphs:
+      - >-
+        You will work on Labs 1-4 in small teams of 3 students each. All lab
+        assignments are due at 11:59pm ET on the specified due date (lab
+        deliverables usually on a Monday). Please check Piazza, Gradescope, and
+        the course website for exact lab due dates.
+      - >-
+        The penalty for late lab assignments is 10% per day. Each student will
+        receive a total budget of three grace days for the entire course. Each
+        grace day can be used to cover one day late without incurring the 10%
+        penalty.
+    bullets:
+      - >-
+        Grace days are applied automatically until you run out. But, no more than
+        two grace days can be used on any one lab assignment. Once you have spent
+        all of your grace days, then you will receive a penalty of 10% for each
+        subsequent late day.
+      - >-
+        Late assignments will only be accepted up to two days after the specified
+        due date, or the termination date, i.e., all late submissions must be
+        submitted by the termination date and can only be late by at most two
+        days.
+  homework:
+    paragraphs:
+      - >-
+        Short weekly homeworks are due on Friday before recitation, covering the
+        lecture concepts from previous weeks.
+      - >-
+        Homework serves to prepare students for exams, where the score will be
+        based on completion. The homeworks will include feedback from course
+        staff, which will emulate exam grading, for students to prepare and learn
+        from before exams. Since homeworks are graded on completion there will be
+        no late penalty on homework assignments, but timely course staff feedback
+        is only guaranteed to on time submissions.
   accommodations: >-
     If you have a disability and have an accommodations letter from the
     Disability Resources office, please discuss your accommodations and needs

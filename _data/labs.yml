@@ -4,44 +4,62 @@
 # `id` must match the `lab:` value used in _data/schedule.yml so the schedule's
 # Lab column lines up with the descriptions on the Labs page.
 #
-# EXAMPLE ENTRIES ONLY -- two of the six labs are filled in to show the schema.
-# See course_files_export/Labs F25/ for the Fall 2025 handouts.
+# Fields:
+#   id        required -- "Lab 0" .. "Lab 4"
+#   title     required
+#   duration  optional -- printed after the title, e.g. "(2 weeks)"
+#   team      optional -- only set it to mark an EXCEPTION to the default
+#               (teams of 3, stated in the prose on labs.html). Lab 0 is
+#               individual, so it carries `team: individual`.
+#   tools     optional -- list, printed as "Tools: a, b"
+#   bullets   optional -- list of what the lab covers
+#   handout   optional -- a PDF path or Canvas link; makes the title a link
 # ---------------------------------------------------------------------------
 
 labs:
   - id: Lab 0
     title: Orientation
     duration: 1 week
-    tools: [gem5, McPAT]
+    team: individual
+    tools: [Gem5, McPAT]
     bullets:
-      - Learn how to run programs
+      - Learn how to run programs in Gem5
       - Do some initial analysis of metrics and pipeline stalls
-      - Experiment with different built-in processor configurations
+      - Play around with different built-in processor configurations
     # handout: https://canvas.cmu.edu   # optional -- a PDF path or Canvas link
 
   - id: Lab 1
     title: "CPU Design: Dynamic Branch Predictors"
     duration: 2 weeks
-    tools: [gem5, McPAT]
+    tools: [Gem5, McPAT]
     bullets:
-      - Implement global, local, gshare, perceptron, and TAGE predictors in C
-      - Study performance, energy, area, and efficiency metrics
-      - Design your own branch prediction algorithm (class competition)
+      - Implement different branch predictors (global, local, gshare, perceptron, TAGE) in C
+      - "Study various metrics: performance, energy, area, efficiency"
+      - Students come up with their own branch prediction algorithm (competition for best performance)
 
-  # Titles and durations below come from the Fall 2026 schedule. The `bullets:`
-  # are not in that source -- add them from the lab handouts.
   - id: Lab 2
-    title: "CPU Design: Superscalar Out-of-Order Structures"
-    duration: 2.5 weeks
+    title: "CPU Design: Superscalar Out-of-Order Structures and Cache Coherence"
+    duration: 4 weeks
+    tools: [VCS]
+    bullets:
+      - Study issue queues, wakeup/select logic, ROB sizing, dependency checking
+      - Explore superscalar widths, pipeline stages, RS and ROB implementations in SystemVerilog
+      - Implement cache coherence protocols (MSI, MESI) in C
 
   - id: Lab 3
-    title: "Asymmetric Cores: Multicore CPUs & Shared Memory"
-    duration: 2.5 weeks
+    title: Profiling Snapdragon SoC
+    duration: 4 weeks
+    bullets:
+      - >-
+        Experimentally investigate and profile the behavior of single threaded,
+        multi-threaded, GPU, NPU, and DSP workloads on the Snapdragon SoC
+      - Heterogeneous profiling, including of the shared memory system on the Snapdragon SoC
 
   - id: Lab 4
-    title: "Heterogeneous Cores: with GPUs"
-    duration: 2.5 weeks
-
-  - id: Lab 5
-    title: "Heterogeneous Cores: with NPUs"
-    duration: 2.5 weeks
+    title: Heterogeneous Systems and Algorithms
+    duration: 3.5 weeks
+    bullets:
+      - >-
+        Conduct a study to showcase the differences between various heterogeneous
+        algorithms and how they behave differently across a multitude of dimensions
+      - Experimentally investigate running AI inference workloads on CPU-GPU-NPU systems

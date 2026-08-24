@@ -17,14 +17,39 @@ instructors:
     role: Instructor
     email: owh@.cmu.edu
     office: CIC 4121
-    hours: Tu/Th 2:00pm - 3:00pm ET (from SH to CIC)
+    hours: Tu/Th 2:00pm - 2:50pm ET (from SH to CIC)
 
 tas:
-  # Example entry -- fully populated, showing every supported field.
-  - name: TBA
-    email:
-    sections: [A, B]
-    hours: TBA
-  # Example entry -- minimal. Omitted fields simply don't render.
-  - name: TBA
-    sections: [B, SV]
+  - name: Liam Carden (Head TA)
+    role: Head Teaching Assistant
+    email: lcarden@andrew.cmu.edu
+    office: CIC 4120
+    hours: Wed 11am-12pm ET in CIC 4120, Fri 3-4pm ET in BH 145
+  - name: Vishal Setty
+    role: Teaching Assistant
+    email: vsetty@andrew.cmu.edu
+    hours: Thurs 5-7pm ET (Zoom)
+
+  - name: Alfredo Gutierrez
+    role: Teaching Assistant
+    email: abarande@andrew.cmu.edu
+    office: HH 1303
+    hours: Mon 10:30-11:30am ET in HH 1303
+
+  - name: Petros Emmanouilidi
+    role: Teaching Assistant
+    email: pemmanou@andrew.cmu.edu
+    office: HH 1310
+    hours: Wed 2-4pm ET in HH 1310
+
+  - name: Shreya Mukherjee
+    role: Teaching Assistant
+    email: shreyamu@andrew.cmu.edu
+    office: HH 1303
+    hours: Monday 2-4pm ET in HH 1303
+
+  - name: Victor Zayakov
+    role: Teaching Assistant
+    email: vzayakov@andrew.cmu.edu
+    office: HH 1304
+    hours: Mondays 4-6pm ET in HH 1304

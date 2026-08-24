@@ -65,7 +65,13 @@ weeks:
       - title: "gem5 tutorial (video)"
         url: https://www.youtube.com/watch?v=npbMXXoKltg
         optional: true
+      - title: "Learning gem5"
+        url: https://www.gem5.org/documentation/learning_gem5/introduction/
+        optional: true
     assignments:
+      - name: "Lab 0"
+        status: released
+        date: 2026-08-19
       - name: "Lab 1"
         status: released
         date: 2026-08-28
@@ -74,7 +80,7 @@ weeks:
         kind: lecture
         number: 1
         title: "Computer Architecture & Processor Design"
-        lecturer: "OH/JS"
+        lecturer: "JS/OH"
       - date: 2026-08-27
         kind: lecture
         number: 2
@@ -83,7 +89,7 @@ weeks:
       - date: 2026-08-28
         kind: recitation
         number: 1
-        title: "Course Overview & Lab 0 & Lab 1 & Logistics"
+        title: "Course Overview; Lab 0 & Lab 1 Assignments"
 
   - week: 2
     lab_banner: "Lab 1: CPU Design: Dynamic Branch Predictors (2 weeks)"
@@ -132,13 +138,16 @@ weeks:
         title: "Lab 2 Preview & Tomasulo’s Algorithm"
 
   - week: 4
-    lab_banner: "Lab 2: CPU Design: Superscalar Out-of-Order Structures (2.5 weeks)"
+    lab_banner: "Lab 2: CPU Design: Superscalar Out-of-Order Structures / Cache Coherence (4 weeks)"
     assignments:
       - name: "Lab 1"
         status: due
         date: 2026-09-14
-      - name: "5-8pm: Presentation prep session (optional)"
+      - name: "5:30-8pm: Presentation prep session (optional)"
         date: 2026-09-15
+      - name: "HW 1"
+        status: due
+        date: 2026-09-18
       - name: "HW 2"
         status: released
         date: 2026-09-18
@@ -160,9 +169,12 @@ weeks:
 
   - week: 5
     assignments:
-      - name: "HW 1"
+      - name: "HW 2"
         status: due
-        date: 2026-09-21
+        date: 2026-09-25
+      - name: "HW 3"
+        status: released
+        date: 2026-09-25
     events:
       - date: 2026-09-22
         kind: lecture
@@ -177,19 +189,9 @@ weeks:
       - date: 2026-09-25
         kind: recitation
         number: 5
-        title: "Memory Subsystem & Heterogeneous Architectures"
+        title: "Operating Systems and Parallel Programming" 
 
   - week: 6
-    assignments:
-      - name: "HW 2"
-        status: due
-        date: 2026-09-28
-      - name: "Lab 3"
-        status: released
-        date: 2026-10-02
-      - name: "HW 3"
-        status: released
-        date: 2026-10-02
     events:
       - date: 2026-09-29
         kind: lecture
@@ -204,14 +206,19 @@ weeks:
       - date: 2026-10-02
         kind: recitation
         number: 6
-        title: "Operating Systems & Parallel Programming & Discussion of Lab 3 / Qualcomm Board Logistics"
+        title: "Parallel Programming & Heterogeneous Architectures"
 
   - week: 7
-    lab_banner: "Lab 3: Asymmetric Cores: Multicore CPUs & Shared Memory (2.5 weeks)"
     assignments:
       - name: "Lab 2"
         status: due
-        date: 2026-10-05
+        date: 2026-10-09
+      - name: "HW 3"
+        status: due
+        date: 2026-10-09
+      - name: "Lab 3"
+        status: released
+        date: 2026-10-09
       - name: "HW 4"
         status: released
         date: 2026-10-09
@@ -227,17 +234,18 @@ weeks:
       - date: 2026-10-09
         kind: recitation
         number: 7
-        title: "Unified Memory & Exam #1 Post Mortem"
+        title: "Unified Memory & Lab 2 Logistics"
         note: "Async"
 
   - week: 8
     break_banner:
       date_text: "10/12-10/16"
       title: "NO CLASSES - Fall Break!!!"
+    lab_banner: "Lab 3: Heterogeneous Cores: Profiling Snapdragon SoC (4 weeks)"
     assignments:
-      - name: "HW 3"
+      - name: "HW 4"
         status: due
-        date: 2026-10-19
+        date: 2026-10-23
       - name: "HW 5"
         status: released
         date: 2026-10-23
@@ -255,14 +263,15 @@ weeks:
       - date: 2026-10-23
         kind: recitation
         number: 8
-        title: "Sparse Tensor Compilation & VLIW & Profiling Lab"
+        title: "Exam 1 Post Mortem & Dataflow"
 
   - week: 9
-    lab_banner: "Lab 4: Heterogeneous Cores: with GPUs (2.5 weeks)"
     assignments:
-      - name: "HW 4"
+    #  - name: "Lab Help Session (optional): 5:30-8:00pm"
+    #     date: 2026-10-27
+      - name: "HW 5"
         status: due
-        date: 2026-10-26
+        date: 2026-10-30
       - name: "HW 6"
         status: released
         date: 2026-10-30
@@ -275,18 +284,18 @@ weeks:
       - date: 2026-10-29
         kind: lecture
         number: 17
-        title: "Re-Emergence of VLIW in NPU and LPU Designs"
+        title: "(Re)Emergence of VLIW in NPU and LPU Designs"
         lecturer: "JS"
       - date: 2026-10-30
         kind: recitation
         number: 9
-        title: "Neuromorphic Computing Case Studies"
+        title: "VLIW & Power/Efficiency"
 
   - week: 10
     assignments:
-      - name: "HW 5"
+      - name: "HW 6"
         status: due
-        date: 2026-11-02
+        date: 2026-11-06
     events:
       - date: 2026-11-03
         kind: holiday
@@ -294,36 +303,35 @@ weeks:
       - date: 2026-11-05
         kind: lecture
         number: 18
-        title: "Grace-Blackwell & Vera-Rubin CPU-GPU Architectures"
-        lecturer: "Prabhu Vellaisamy - Samsung, NVIDIA (CMU alum)"
+        title: "Return of the CPU? Overview of NVIDIA Vera CPU"
+        lecturer: "JS"
       - date: 2026-11-06
         kind: recitation
         number: 10
-        title: "Survey of AI Inference Hardware"
+        title: "CPU Re-emergence / Lab Assistance"
 
   - week: 11
     assignments:
-      - name: "HW 6"
-        status: due
-        date: 2026-11-09
+#      - name: "Lab Help Session (optional): 5:30-8:00pm"
+#        date: 2026-11-10
     events:
       - date: 2026-11-10
         kind: lecture
         number: 19
-        title: "Neuromorphic & NeuroAI Computing Systems"
-        lecturer: "JS/LC"
+        title: "Experimental Characterization of LLM Inference on Heterogeneous (Edge & Server) Systems"
+        lecturer: "JS"
       - date: 2026-11-12
         kind: lecture
         number: 20
-        title: "Experimental Characterization of LLM Inference on Heterogeneous (Edge & Server) Systems"
-        lecturer: "JS"
+        title: "Neuromorphic & NeuroAI Computing Systems"
+        lecturer: "JS/LC"
       - date: 2026-11-13
         kind: recitation
         number: 11
-        title: "Scheduling Lab"
+        title: "Neuromorphic Computing"
 
   - week: 12
-    lab_banner: "Lab 5: Heterogeneous Cores: with NPUs (2.5 weeks)"
+    lab_banner: "Lab 4: Heterogeneous Cores: Heterogeneous Systems and Algorithms (3.5 weeks)"
     events:
       - date: 2026-11-17
         kind: exam
@@ -336,7 +344,7 @@ weeks:
       - date: 2026-11-20
         kind: recitation
         number: 12
-        title: "TBD & Exam #2 Post Mortem"
+        title: "Lab Assistance & Exam #2 Post Mortem"
 
   - week: 13
     events:
@@ -352,6 +360,8 @@ weeks:
 
   - week: 14
     assignments:
+#      - name: "Lab Help Session (optional): 5:30-8:00pm"
+#        date: 2026-12-1
       - name: "Lab 5 (no late submission)"
         status: due
         date: 2026-12-09
@@ -369,4 +379,4 @@ weeks:
       - date: 2026-12-04
         kind: recitation
         number: 13
-        title: "TBD & Course Wrapup"
+        title: "Lab Assistance & Course Wrapup"

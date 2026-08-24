@@ -9,12 +9,44 @@ title: Course Info
 
 <p><b>Term</b>: {{ course.term }}</p>
 
-{% for m in course.meetings %}
-  <p>
-    <b>Section {{ m.section }}</b>{% if m.campus %} ({{ m.campus }}){% endif %}:
-    Lectures {{ m.lectures }}; Recitation {{ m.recitation }}
-  </p>
-{% endfor %}
+{% comment %}
+  Each cell is when / where / how, stacked on three lines. `lecture_id` is shown
+  because sections A and B share a lecture but split for recitation -- the number
+  is what tells a student the two are the same room at the same hour.
+{% endcomment %}
+<div class="table-wrap">
+  <table class="meetings">
+    <thead>
+      <tr>
+        <th>Section</th>
+        <th>Lecture</th>
+        <th>Recitation</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for m in course.meetings %}
+        <tr>
+          <td>
+            <b>{{ m.section }}</b>
+            {%- if m.campus %}<br><span class="staff-role">{{ m.campus }}</span>{% endif %}
+            {%- if m.capacity %}<br><span class="staff-role">{{ m.capacity }} seats</span>{% endif %}
+          </td>
+          <td>
+            {%- if m.lecture_id %}<span class="staff-role">Lecture {{ m.lecture_id }}</span><br>{% endif -%}
+            {{ m.lecture.when }}<br>
+            {% if m.lecture.room %}{{ m.lecture.room }}{% else %}<span class="tba">room TBA</span>{% endif %}
+            {%- if m.lecture.modality %} <span class="lecturer">({{ m.lecture.modality }})</span>{% endif %}
+          </td>
+          <td>
+            {{ m.recitation.when }}<br>
+            {% if m.recitation.room %}{{ m.recitation.room }}{% else %}<span class="tba">room TBA</span>{% endif %}
+            {%- if m.recitation.modality %} <span class="lecturer">({{ m.recitation.modality }})</span>{% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
 
 {% if course.links %}
   <h2>Course Links</h2>
@@ -118,7 +150,18 @@ title: Course Info
 
 <h2>Lab Assignments and Late Policy</h2>
 
-<p>{{ course.policies.late }}</p>
+{% for para in course.policies.late.paragraphs %}<p>{{ para }}</p>{% endfor %}
+{% if course.policies.late.bullets %}
+  <ul>
+    {% for b in course.policies.late.bullets %}<li>{{ b }}</li>{% endfor %}
+  </ul>
+{% endif %}
+
+{% if course.policies.homework %}
+  <h2>Homework Assignments</h2>
+
+  {% for para in course.policies.homework.paragraphs %}<p>{{ para }}</p>{% endfor %}
+{% endif %}
 
 <h2>Students with Disabilities</h2>
 
