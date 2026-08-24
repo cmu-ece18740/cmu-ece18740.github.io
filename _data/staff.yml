@@ -28,7 +28,7 @@ tas:
   - name: Vishal Setty
     role: Teaching Assistant
     email: vsetty@andrew.cmu.edu
-    hours: Thurs 5-7pm ET (Zoom)
+    hours: Thu 5-7pm ET (Zoom)
 
   - name: Alfredo Gutierrez
     role: Teaching Assistant
@@ -46,10 +46,16 @@ tas:
     role: Teaching Assistant
     email: shreyamu@andrew.cmu.edu
     office: HH 1303
-    hours: Monday 2-4pm ET in HH 1303
+    hours: Mon 2-4pm ET in HH 1303
 
   - name: Victor Zayakov
     role: Teaching Assistant
     email: vzayakov@andrew.cmu.edu
     office: HH 1304
-    hours: Mondays 4-6pm ET in HH 1304
+    hours: Mon 4-6pm ET in HH 1304
+
+  - name: Evan Williams
+    role: Teaching Assistant
+    email: emw2@andrew.cmu.edu
+    office: CIC 4117
+    hours: Wed 4-5pm ET in CIC 4117
