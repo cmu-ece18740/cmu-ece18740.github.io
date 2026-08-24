@@ -362,7 +362,7 @@ weeks:
     assignments:
 #      - name: "Lab Help Session (optional): 5:30-8:00pm"
 #        date: 2026-12-1
-      - name: "Lab 5 (no late submission)"
+      - name: "Lab 4 (no late submission)"
         status: due
         date: 2026-12-09
     events:

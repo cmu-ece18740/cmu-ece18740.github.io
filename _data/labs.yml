@@ -1,8 +1,10 @@
 # ---------------------------------------------------------------------------
 # Lab assignments, rendered by labs.html.
 #
-# `id` must match the `lab:` value used in _data/schedule.yml so the schedule's
-# Lab column lines up with the descriptions on the Labs page.
+# Nothing links this file to _data/schedule.yml automatically. The schedule
+# repeats each lab's id, title, and duration in its own `lab_banner:` strings and
+# in the `name:` of its due-date assignments, so a lab renamed, retimed, added,
+# or dropped here has to be changed there by hand as well.
 #
 # Fields:
 #   id        required -- "Lab 0" .. "Lab 4"
