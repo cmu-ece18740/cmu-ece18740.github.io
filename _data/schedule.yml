@@ -71,10 +71,7 @@ weeks:
     assignments:
       - name: "Lab 0"
         status: released
-        date: 2026-08-19
-      - name: "Lab 1"
-        status: released
-        date: 2026-08-28
+        date: 2026-08-25
     events:
       - date: 2026-08-25
         kind: lecture
@@ -97,6 +94,9 @@ weeks:
       - name: "Lab 0"
         status: due
         date: 2026-08-31
+      - name: "Lab 1"
+        status: released
+        date: 2026-09-01
     events:
       - date: 2026-09-01
         kind: lecture
