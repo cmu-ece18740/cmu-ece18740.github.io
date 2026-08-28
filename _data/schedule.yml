@@ -60,7 +60,7 @@ weeks:
       - title: "Course syllabus (read in full)"
         url: https://canvas.cmu.edu/courses/55646
       - title: "Shen & Lipasti, Chapters 1 & 2"
-      - title: "Lecture 1 slides (Canvas / Modules)"
+      - title: "Lectures 1 and 2 slides (Canvas / Modules)"
         url: https://canvas.cmu.edu/courses/55646
       - title: "gem5 tutorial (video)"
         url: https://www.youtube.com/watch?v=npbMXXoKltg
@@ -90,6 +90,16 @@ weeks:
 
   - week: 2
     lab_banner: "Lab 1: CPU Design: Dynamic Branch Predictors (2 weeks)"
+    readings:
+      - title: "Shen & Lipasti, Chapters 4, 5 and 9"
+      - title: "Lectures 3 and 4 slides (Canvas / Modules)"
+        url: https://canvas.cmu.edu/courses/55646
+      - title: "Tse-Yu Yeh and Yale N. Patt, \"Two-Level Adaptive Training Branch Prediction,\" MICRO 1991."
+        url: https://dl.acm.org/doi/10.1145/123465.123475
+        optional: true
+      - title: "Eric Rotenberg, Steve Bennett, and James E. Smith. \"Trace Cache: A Low Latency Approach to High Bandwidth Instruction Fetching.\" MICRO 1996."
+        url: https://dl.acm.org/doi/10.5555/243846.243854
+        optional: true
     assignments:
       - name: "Lab 0"
         status: due
