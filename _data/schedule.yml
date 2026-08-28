@@ -91,7 +91,7 @@ weeks:
   - week: 2
     lab_banner: "Lab 1: CPU Design: Dynamic Branch Predictors (2 weeks)"
     readings:
-      - title: "Shen & Lipasti, Chapters 4, 5 and 9"
+      - title: "Shen & Lipasti, Chapters 4, 5 & 9"
       - title: "Lectures 3 and 4 slides (Canvas / Modules)"
         url: https://canvas.cmu.edu/courses/55646
       - title: "Tse-Yu Yeh and Yale N. Patt, \"Two-Level Adaptive Training Branch Prediction,\" MICRO 1991."
