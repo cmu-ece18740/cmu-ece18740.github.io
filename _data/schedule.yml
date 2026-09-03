@@ -125,9 +125,6 @@ weeks:
 
   - week: 3
     assignments:
-      - name: "Lab 2"
-        status: released
-        date: 2026-09-11
       - name: "HW 1"
         status: released
         date: 2026-09-11
@@ -153,6 +150,9 @@ weeks:
       - name: "Lab 1"
         status: due
         date: 2026-09-14
+      - name: "Lab 2"
+        status: released
+        date: 2026-09-15
       - name: "5:30-8pm: Presentation prep session (optional)"
         date: 2026-09-15
       - name: "HW 1"
