@@ -97,7 +97,7 @@ weeks:
       - title: "Tse-Yu Yeh and Yale N. Patt, \"Two-Level Adaptive Training Branch Prediction.\" MICRO 1991."
         url: https://dl.acm.org/doi/10.1145/123465.123475
         optional: true
-      - title: "Eric Rotenberg, Steve Bennett, and James E. Smith. \"Trace Cache: A Low Latency Approach to High Bandwidth Instruction Fetching.\" MICRO 1996."
+      - title: "Eric Rotenberg, Steve Bennett, and James E. Smith, \"Trace Cache: A Low Latency Approach to High Bandwidth Instruction Fetching.\" MICRO 1996."
         url: https://dl.acm.org/doi/10.5555/243846.243854
         optional: true
     assignments:
@@ -124,6 +124,16 @@ weeks:
         title: "Ensure Team Formations & Discussion of Modern Superscalar Out-of-Order Processors"
 
   - week: 3
+    readings:
+      - title: "Shen & Lipasti, Chapters 5 & 7"
+      - title: "Lectures 5 & 6 slides (Canvas / Modules)"
+        url: https://canvas.cmu.edu/courses/55646
+      - title: "Robert Tomasulo, \"An Efficient Algorithm for Exploiting Multiple Arithmetic Units.\" IBM Journal of Research and Development 1967."
+        url: https://ieeexplore.ieee.org/document/5392028
+        optional: true
+      - title: "Pentium Pro"
+        url: https://en.wikipedia.org/wiki/Pentium_Pro
+        optional: true
     assignments:
       - name: "HW 1"
         status: released
