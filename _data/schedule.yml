@@ -135,6 +135,8 @@ weeks:
         url: https://en.wikipedia.org/wiki/Pentium_Pro
         optional: true
     assignments:
+      - name: "5:45-8pm: Lab 1 lab session (optional)"
+        date: 2026-09-08
       - name: "HW 1"
         status: released
         date: 2026-09-11
@@ -163,8 +165,8 @@ weeks:
       - name: "Lab 2"
         status: released
         date: 2026-09-15
-      - name: "5:30-8pm: Presentation prep session (optional)"
-        date: 2026-09-15
+#      - name: "5:30-8pm: Presentation prep session (optional)"
+#        date: 2026-09-15
       - name: "HW 1"
         status: due
         date: 2026-09-18
