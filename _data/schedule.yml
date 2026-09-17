@@ -158,6 +158,10 @@ weeks:
 
   - week: 4
     lab_banner: "Lab 2: CPU Design: Superscalar Out-of-Order Structures / Cache Coherence (4 weeks)"
+    readings:
+      - title: "Shen & Lipasti, Chapter 3"
+      - title: "Bruce Jacob, \"The Memory System: You Can't Avoid It, You Can't Ignore It, You Can't Fake It,\" 2009 (Secs. 1 & 3)"
+      - title: "Balasubramonian Rajeev, \"Innovations in the Memory System,\" 2019 (Secs. 1 & 4)"
     assignments:
       - name: "Lab 1"
         status: due
