@@ -215,24 +215,24 @@ weeks:
       - date: 2026-09-25
         kind: recitation
         number: 5
-        title: "Operating Systems and Parallel Programming" 
+        title: "Operating Systems and Prefetching" 
 
   - week: 6
     events:
       - date: 2026-09-29
         kind: lecture
         number: 11
-        title: "Parallel Programming & Threading Models"
+        title: "Cache Coherence & Memory Consistency"
         lecturer: "OH"
       - date: 2026-10-01
         kind: lecture
         number: 12
-        title: "Modern Heterogeneous CPU-GPU Architectures"
+        title: "Parallel Programming & Threading Models"
         lecturer: "OH"
       - date: 2026-10-02
         kind: recitation
         number: 6
-        title: "Parallel Programming & Heterogeneous Architectures"
+        title: "Memory Consistency and Parallel Programming"
 
   - week: 7
     assignments:
@@ -255,12 +255,12 @@ weeks:
       - date: 2026-10-08
         kind: lecture
         number: 13
-        title: "GPU and TPU for Accelerating AI Workloads"
+        title: "GPU and TPU for Accelerating Workloads"
         lecturer: "OH"
       - date: 2026-10-09
         kind: recitation
         number: 7
-        title: "Unified Memory & Lab 3 Logistics"
+        title: "Accelerator Architectures & Lab 3 Logistics"
         note: "Async"
 
   - week: 8
@@ -279,7 +279,8 @@ weeks:
       - date: 2026-10-20
         kind: lecture
         number: 14
-        title: "Survey of Cloud & Edge AI Inference Accelerators"
+        title: "Modern Heterogeneous Architectures"
+#         title: "Survey of Cloud & Edge AI Inference Accelerators"
         lecturer: "OH"
       - date: 2026-10-22
         kind: lecture
@@ -289,7 +290,7 @@ weeks:
       - date: 2026-10-23
         kind: recitation
         number: 8
-        title: "Exam 1 Post Mortem & Dataflow"
+        title: "Exam 1 Post Mortem & Unified Memory & Dataflow"
 
   - week: 9
     assignments:
