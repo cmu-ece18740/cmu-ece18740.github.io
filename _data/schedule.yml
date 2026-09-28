@@ -218,6 +218,9 @@ weeks:
         title: "Operating Systems and Prefetching" 
 
   - week: 6
+    assignments:
+      - name: "6:00-7:30pm: Lab 2 lab session in BH A51 (optional)"
+        date: 2026-09-29
     events:
       - date: 2026-09-29
         kind: lecture
