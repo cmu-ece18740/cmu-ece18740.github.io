@@ -194,6 +194,11 @@ weeks:
         title: "Cache Coherence, Memory Consistency, Asym. Cores"
 
   - week: 5
+    readings:
+      - title: "Sec. 5: Bhattacharjee et al., \"Architectural and Operating System Support for Virtual Memory,\" 2017"
+      - title: "Skim: Scott Michael L., \"Shared Memory Synchronization,\" 2013"
+      - title: "Sec. 3: Bugnion et al., \"Hardware and Software Support for Virtualization,\" 2017"
+        optional: true
     assignments:
       - name: "HW 2"
         status: due
