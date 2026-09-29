@@ -223,6 +223,11 @@ weeks:
         title: "Operating Systems and Prefetching" 
 
   - week: 6
+    readings:
+      - title: "Sec. 2, 3 & 8: Sorin et al., \"A Primer on Memory Consistency and Cache Coherence,\" 2011"
+      - title: "Sec. 1 & 2: Balasubramonian et al., \"Multi-Core Cache Hierarchies,\" 2011"
+      - title: "Sec. 5: Jain Akanksha, Lin Calvin, \"Cache Replacement Policies,\" 2019"
+        optional: true
     assignments:
       - name: "6:00-7:30pm: Lab 2 help session in BH A51 (optional)"
         date: 2026-09-29
