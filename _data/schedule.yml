@@ -240,12 +240,12 @@ weeks:
       - date: 2026-10-01
         kind: lecture
         number: 12
-        title: "Parallel Programming & Threading Models"
-        lecturer: "OH"
+        title: "Performance, Power, Energy Efficiency Iron Laws"
+        lecturer: "JS"
       - date: 2026-10-02
         kind: recitation
         number: 6
-        title: "Memory Consistency and Parallel Programming"
+        title: "Memory Consistency"
 
   - week: 7
     assignments:
@@ -262,12 +262,12 @@ weeks:
       - date: 2026-10-08
         kind: lecture
         number: 13
-        title: "GPU and TPU for Accelerating Workloads"
+        title: "Parallel Programming & Threading Models"
         lecturer: "OH"
       - date: 2026-10-09
         kind: recitation
         number: 7
-        title: "Accelerator Architectures & Lab 3 Logistics"
+        title: "Parallel Programming & Lab 3 Logistics"
         note: "Async"
 
   - week: 8
@@ -292,13 +292,13 @@ weeks:
       - date: 2026-10-20
         kind: lecture
         number: 14
-        title: "Modern Heterogeneous Architectures"
-#         title: "Survey of Cloud & Edge AI Inference Accelerators"
+        title: "GPU and TPU for Accelerating Workloads"
         lecturer: "OH"
       - date: 2026-10-22
         kind: lecture
         number: 15
-        title: "Research on Sparse Tensor Compilation and Mapping for Heterogeneous Domain-Specific Accelerators"
+        title: "Modern Heterogeneous Architectures"
+#         title: "Survey of Cloud & Edge AI Inference Accelerators"
         lecturer: "OH"
       - date: 2026-10-23
         kind: recitation
@@ -319,8 +319,8 @@ weeks:
       - date: 2026-10-27
         kind: lecture
         number: 16
-        title: "Performance, Power, Energy Efficiency Iron Laws"
-        lecturer: "JS"
+        title: "Research on Sparse Tensor Compilation and Mapping for Heterogeneous Domain-Specific Accelerators"
+        lecturer: "OH"
       - date: 2026-10-29
         kind: lecture
         number: 17
