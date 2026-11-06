@@ -292,13 +292,12 @@ weeks:
       - date: 2026-10-20
         kind: lecture
         number: 14
-        title: "GPU and TPU for Accelerating Workloads"
+        title: "Modern Heterogeneous CPU-GPU Architectures"
         lecturer: "OH"
       - date: 2026-10-22
         kind: lecture
         number: 15
-        title: "Modern Heterogeneous Architectures"
-#         title: "Survey of Cloud & Edge AI Inference Accelerators"
+        title: "Dataflow Architectures for Edge and Cloud"
         lecturer: "OH"
       - date: 2026-10-23
         kind: recitation
@@ -306,12 +305,19 @@ weeks:
         title: "Exam 1 Post Mortem & Unified Memory & Dataflow"
 
   - week: 9
+    readings:
+      - title: 'Colwell et al., "A VLIW Architecture for a Trace Scheduling Compiler," 1987 (required)'
+        url: https://dl.acm.org/doi/10.1145/36177.36201
+      - title: 'Lowney et al., "The Multiflow Trace Scheduling Compiler," 1992'
+        optional: true
+      - title: 'Hennessy & Patterson, 5th ed., Appendix H, "Hardware and Software for VLIW and EPIC"'
+        optional: true
     assignments:
     #  - name: "Lab Help Session (optional): 5:30-8:00pm"
     #     date: 2026-10-27
       - name: "HW 5"
         status: due
-        date: 2026-10-30
+        date: 2026-10-31
       - name: "HW 6"
         status: released
         date: 2026-10-30
@@ -324,7 +330,7 @@ weeks:
       - date: 2026-10-29
         kind: lecture
         number: 17
-        title: "(Re)Emergence of VLIW in NPU and LPU Designs"
+        title: "Revisit VLIW Architecture & Trace Scheduling"
         lecturer: "JS"
       - date: 2026-10-30
         kind: recitation
@@ -343,8 +349,8 @@ weeks:
       - date: 2026-11-05
         kind: lecture
         number: 18
-        title: "Return of the CPU? Overview of NVIDIA Vera CPU"
-        lecturer: "JS"
+        title: "Vera Rubin: How LLM Workloads Reshaped the GPU, the CPU, and the System"
+        lecturer: "Avinash Eega (NVIDIA)"
       - date: 2026-11-06
         kind: recitation
         number: 10
@@ -352,6 +358,9 @@ weeks:
 
   - week: 11
     assignments:
+      - name: "Lab 3 (11:59 PM ET)"
+        status: due
+        date: 2026-11-14
 #      - name: "Lab Help Session (optional): 5:30-8:00pm"
 #        date: 2026-11-10
     events:
