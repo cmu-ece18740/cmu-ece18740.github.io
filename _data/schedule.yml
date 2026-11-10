@@ -389,6 +389,8 @@ weeks:
         url: https://www.intechopen.com/books/12422
         optional: true
     assignments:
+      - name: "Exam 2 Review Session - 6:00pm in DH 1212"
+        date: 2026-11-12
       - name: "Lab 3 (11:59 PM ET)"
         status: due
         date: 2026-11-14
