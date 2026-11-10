@@ -248,6 +248,8 @@ weeks:
         title: "Memory Consistency"
 
   - week: 7
+    readings:
+      - title: "Sec. 3, 4 & 5: Nemirovsky et al., \"Multithreading Architectures,\" 2012"
     assignments:
       - name: "Lab 2"
         status: due
@@ -275,6 +277,12 @@ weeks:
       date_text: "10/12-10/16"
       title: "NO CLASSES - Fall Break!!!"
     lab_banner: "Lab 3: Heterogeneous Cores: Profiling Snapdragon SoC (4 weeks)"
+    readings:
+      - title: "Sec. 2 & 3: Aamodt et al., \"General-Purpose Graphics Architectures,\" 2018"
+      - title: "Recommended reference: Aamodt, Tor M., Wilson Wai Lun Fung, Timothy G. Rogers, and Margaret Martonosi, \"General-purpose graphics processor architectures,\" Synthesis Lectures on Computer Architecture, Morgan & Claypool Publishers, 2018"
+        optional: true
+      - title: "Recommended reference: Arvind and David E. Culler, \"Dataflow Architectures,\" Annual Review of Computer Science, vol. 1, pp. 225–253, 1986"
+        optional: true
     assignments:
       - name: "Lab 3"
         status: released
@@ -311,6 +319,10 @@ weeks:
       - title: 'Lowney et al., "The Multiflow Trace Scheduling Compiler," 1992'
         optional: true
       - title: 'Hennessy & Patterson, 5th ed., Appendix H, "Hardware and Software for VLIW and EPIC"'
+        optional: true
+      - title: 'H.T. Kung, "Why systolic architectures," IEEE Computer, 1982'
+        optional: true
+      - title: 'Jouppi et al., "In-Datacenter Performance Analysis of a Tensor Processing Unit," ISCA 2017'
         optional: true
     assignments:
     #  - name: "Lab Help Session (optional): 5:30-8:00pm"
@@ -357,6 +369,25 @@ weeks:
         title: "CPU Re-emergence / Lab Assistance"
 
   - week: 11
+    readings:
+      - title: "Chapters 1 & 3 of James E. Smith, \"Space-Time Computing with Temporal Neural Networks,\" Synthesis Lectures on Computer Architecture, Morgan Claypool, May 2017"
+        url: https://www.morganclaypool.com/doi/10.2200/S00771ED1V01Y201704CAC039
+        optional: true
+      - title: "Chapters 1–7 of Jeff Hawkins, \"A Thousand Brains: A New Theory of Intelligence,\" 2021, part 1 (91 pages)"
+        url: https://www.amazon.com/Thousand-Brains-New-Theory-Intelligence/dp/B08VWV2WDK
+        optional: true
+      - title: "Khaled S. Ahmed and Fayroz F. Shereif, \"Neuromorphic Computing between Reality and Future Needs,\" Neuromorphic Computing, Chapter 5, IntechOpen, 2023"
+        url: https://www.intechopen.com/chapters/86207
+        optional: true
+      - title: "John Paul Shen and Harideep Nair, \"Cortical Columns Computing Systems: Microarchitecture Model, Functional Building Blocks, and Design Tools,\" Neuromorphic Computing, Chapter 8, IntechOpen, 2023"
+        url: https://www.intechopen.com/chapters/86375
+        optional: true
+      - title: 'Recommended reference: Dennis V. Christensen et al., "2022 Roadmap on Neuromorphic Computing and Engineering," Neuromorphic Computing and Engineering 2, 022501, 2022'
+        url: https://backend.orbit.dtu.dk/ws/portalfiles/portal/267159068/2105.05956.pdf
+        optional: true
+      - title: 'Recommended reference: Yang (Cindy) Yi and Hongyu An (eds.), "Neuromorphic Computing," 2023'
+        url: https://www.intechopen.com/books/12422
+        optional: true
     assignments:
       - name: "Lab 3 (11:59 PM ET)"
         status: due
