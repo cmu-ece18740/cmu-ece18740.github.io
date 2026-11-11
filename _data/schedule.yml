@@ -414,6 +414,10 @@ weeks:
 
   - week: 12
     lab_banner: "Lab 4: Heterogeneous Cores: Heterogeneous Systems and Algorithms (3.5 weeks)"
+    assignments:
+      - name: "Lab 4"
+        status : released
+        date: 2026-11-17
     events:
       - date: 2026-11-17
         kind: exam
